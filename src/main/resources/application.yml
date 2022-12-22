@@ -1,0 +1,28 @@
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql: trace
+server:
+  port: 7080
+
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+    password : 0000
+
+spring:
+  kafka:
+    bootstrap-servers:
+      - localhost:19092
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/twitterdashboard?characterEncoding=UTF-8
+    username: ENC(6xIdLEN511AW2zQYoJNyPA==)
+    password: ENC(27DU1jFyyYKyDIktI4hh2uVgrI4uLUmc)
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    properties:
+      hibernate:
